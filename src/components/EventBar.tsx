@@ -15,11 +15,11 @@ export default memo(function EventBar({ name, title, style }: EventBarProps) {
       title={title}
       style={style}
     >
-      <span className="event-name">
+      <span className="event-name" data-testid="event-name">
         {name}
       </span>
-      <div className="event-tooltip">
-        <span className="event-tooltip-text">
+      <div className="event-tooltip" data-testid="event-tooltip">
+        <span className="event-tooltip-text" data-testid="event-tooltip-text">
           {name}
         </span>
       </div>

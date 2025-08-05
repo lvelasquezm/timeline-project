@@ -12,6 +12,7 @@ export default memo(function Dates({ totalDays, minDate, style }: DatesProps) {
   return (
     <div
       className="dates-container"
+      data-testid="dates-container"
       style={style}
     >
       {Array.from({ length: totalDays }).map((_, index) => {

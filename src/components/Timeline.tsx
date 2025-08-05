@@ -55,7 +55,7 @@ export default function Timeline({ events }: TimelineProps) {
   );
 
   return (
-    <div className="timeline-wrapper">
+    <div className="timeline-wrapper" data-testid="timeline-wrapper">
       <div className="timeline-container">
         <div
           className="timeline-grid"
