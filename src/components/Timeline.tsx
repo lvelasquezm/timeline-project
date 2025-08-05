@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { memo, useMemo } from 'react';
 
 import '../styles/Timeline.css';
 
@@ -14,7 +14,7 @@ type TimelineProps = {
   events: TimelineItem[];
 };
 
-export default function Timeline({ events }: TimelineProps) {
+export default memo(function Timeline({ events }: TimelineProps) {
   // Sort events by their start date to simplify the layout calculation.
   const sortedEvents = useMemo(() => {
     return [...events].sort(
@@ -100,4 +100,4 @@ export default function Timeline({ events }: TimelineProps) {
       </div>
     </div>
   );
-}
+});
