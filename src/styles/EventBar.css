@@ -1,0 +1,59 @@
+.event-bar {
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 500;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 300ms, box-shadow 300ms;
+  min-width: 100px;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.event-bar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  white-space: normal;
+}
+
+.event-name {
+  font-size: 0.875rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+.event-bar:hover .event-name {
+  opacity: 0;
+}
+
+.event-tooltip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  text-align: center;
+  background-color: rgba(31, 41, 55, 0.8);
+  border-radius: 0.5rem;
+  opacity: 0;
+}
+
+.event-bar:hover .event-tooltip {
+  opacity: 1;
+}
+
+.event-tooltip-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
